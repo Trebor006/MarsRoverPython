@@ -19,9 +19,9 @@ class RoverMain(object):
         self.inicio = True
         self.movimientos=""
         
-    def ejecutar(self):
+    def ejecutar(self,directorio_archivo):
         px=Rover(0,0)    
-        f = open("EntradaDeDatos.txt")   
+        f = open(directorio_archivo)   
         for linea in f:
  #           print(linea)
             if self.inicio==True:
@@ -52,4 +52,4 @@ class RoverMain(object):
         f.close()
                 
 objeto = RoverMain()
-objeto.ejecutar()
+objeto.ejecutar("EntradaDeDatos.txt")
